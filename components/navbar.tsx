@@ -6,7 +6,7 @@ export default function NavBar() {
             <nav className="topnav">
                 <a href="/">Home</a>
                 <a href="/posts">Posts</a>
-                <a href="/team">Team</a>
+                <a href="/about">About</a>
                 <a href="/projects">Projects</a>
             </nav>
         </header>

@@ -1,10 +1,10 @@
 import React from "react";
 import Page from "~/components/page.tsx";
 
-export default function Team() {
+export default function About() {
     return (
-        <Page pageTitle="Team">
-            <h1>Team</h1>
+        <Page pageTitle="About">
+            <h1>About</h1>
         </Page>
     );
 }

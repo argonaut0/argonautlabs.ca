@@ -2,7 +2,7 @@ import React, { ComponentType } from "react";
 import { useDeno } from "framework/react";
 
 export default function App({ Page, pageProps }: { Page: ComponentType<any>, pageProps: any }) {
-  const site = {
+  const siteProps = {
     posts: Array.from(useDeno(() => Deno.readDirSync("./posts"))),
 };
 
@@ -11,7 +11,7 @@ export default function App({ Page, pageProps }: { Page: ComponentType<any>, pag
       <head>
         <meta name="viewport" content="width=device-width" />
       </head>
-      <Page {...pageProps} />
+      <Page {...pageProps} {...siteProps} />
     </div>
   )
 }
