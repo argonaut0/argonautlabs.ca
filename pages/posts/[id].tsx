@@ -5,7 +5,7 @@ import E404 from "~/404.tsx";
 import { Marked } from "markdown";
 import Page from "~/components/page.tsx";
 
-export default function Post({ posts }: { posts: Deno.DirEntry[] }) {
+export default function Post({ posts }: { posts: any }) {
     const {
         pathname,
         routePath,
@@ -13,17 +13,12 @@ export default function Post({ posts }: { posts: Deno.DirEntry[] }) {
         query
     } = useRouter();
 
-    const path: string = params.id;
-    const postNames: string[] = posts.map( (x) => x.name );
 
-    if ( postNames.includes(path) ) {
-        const {
-            content,
-            meta
-        } = Marked.parse(useDeno(() => Deno.readTextFileSync("./posts/" + path + "/index.md")));
+    if ( posts[params.id] ) {
         return (
-            <Page pageTitle={ meta.title }>
-                <main dangerouslySetInnerHTML={{__html: content}}></main>
+            <Page pageTitle={ posts[params.id].meta.title }>
+                <h1>{ posts[params.id].meta.title }</h1>
+                <main dangerouslySetInnerHTML={{__html: posts[params.id].content }}></main>
             </Page>
         );
     } 

@@ -5,6 +5,7 @@ export default function About() {
     return (
         <Page pageTitle="About">
             <h1>About</h1>
+            
         </Page>
     );
 }

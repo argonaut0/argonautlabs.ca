@@ -2,14 +2,21 @@ import React from "react";
 import { useDeno } from "framework/react";
 import Page from "~/components/page.tsx";
 
-export default function Posts({ posts }: { posts: Deno.DirEntry[]}) {
-
+export default function Posts({ posts }: { posts: any }) {
     return (
         <Page pageTitle="Posts">
             <h1>Posts</h1>
             <main>
                 <ul>
-                { posts.map((x) => <a href={"/posts/" + x.name}>{x.name}</a>) }
+                {
+                Object.keys(posts).map((x) => {
+                    return (
+                        <li key={x}>
+                            <a href={"/posts/" + x}>{posts[x].meta.title}</a>
+                            <p>{posts[x].meta.description}</p>
+                        </li>
+                    )
+                })}
                 </ul>
             </main>
         </Page>
