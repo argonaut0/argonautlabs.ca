@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "~/components/head.tsx";
-import NavBar from "~/components/navbar.tsx";
-import Footer from "~/components/footer.tsx";
+import { React } from "../deps.ts";
+import Head from "./head.tsx";
+import NavBar from "./navbar.tsx";
+import Footer from "./footer.tsx";
 
 export default function Page(props: {pageTitle: string, children: React.ReactNode}) {
     return (

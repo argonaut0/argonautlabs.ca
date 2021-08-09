@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "../deps.ts";
 
 export default function Head(props: {title: string}) {
 

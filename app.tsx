@@ -1,9 +1,7 @@
-import React, { ComponentType } from "react";
-import { useDeno } from "framework/react";
-import { Marked } from "markdown";
+import { React, useDeno, Marked } from "./deps.ts";
 
 
-export default function App({ Page, pageProps }: { Page: ComponentType<any>, pageProps: any }) {
+export default function App({ Page, pageProps }: { Page: React.ComponentType<any>, pageProps: any }) {
   
   const paths = Array.from(useDeno(() => Deno.readDirSync("./posts")));
   

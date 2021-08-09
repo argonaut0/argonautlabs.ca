@@ -1,6 +1,5 @@
-import React from "react";
-import { useDeno } from "framework/react";
-import Page from "~/components/page.tsx";
+import { React, useDeno } from "../../deps.ts";
+import Page from "../../components/page.tsx";
 
 export default function Posts({ posts }: { posts: any }) {
     return (

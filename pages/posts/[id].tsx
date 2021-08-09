@@ -1,9 +1,7 @@
-import React from "react";
-import { useRouter } from "framework/react";
-import { useDeno } from "framework/react";
-import E404 from "~/404.tsx";
-import { Marked } from "markdown";
-import Page from "~/components/page.tsx";
+import { React } from "../../deps.ts";
+import { useRouter, useDeno, Marked } from "../../deps.ts";
+import E404 from "../../404.tsx";
+import Page from "../../components/page.tsx";
 
 export default function Post({ posts }: { posts: any }) {
     const {

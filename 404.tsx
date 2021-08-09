@@ -1,5 +1,5 @@
-import React from "react";
-import Page from "~/components/page.tsx";
+import { React } from "./deps.ts";
+import Page from "./components/page.tsx";
 
 export default function E404() {
     return (
