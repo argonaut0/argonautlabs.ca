@@ -14,9 +14,9 @@ export default function Post({ posts }: { posts: any }) {
 
     if ( posts[params.id] ) {
         return (
-            <Page pageTitle={ posts[params.id].meta.title }>
-                <h1>{ posts[params.id].meta.title }</h1>
-                <main dangerouslySetInnerHTML={{__html: posts[params.id].content }}></main>
+            <Page className="post" pageTitle={ posts[params.id].meta.title }>
+                <h1 className="post-title">{ posts[params.id].meta.title }</h1>
+                <main className="post-content" dangerouslySetInnerHTML={{__html: posts[params.id].content }}></main>
             </Page>
         );
     } 
